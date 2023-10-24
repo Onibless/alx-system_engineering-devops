@@ -41,13 +41,13 @@ frontend betascribbles.tech-http-frontend
 
 
 frontend  beta-scribbles.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/beta-scribbles.tech.pem
+	bind *:443 ssl crt /etc/ssl/bless-alx.tech.pem
 	http-request set-header X-Forwarded-Proto https
         default_backend beta-scribbles.tech-backend
 
 
 backend beta-scribbles.tech-backend
         balance roundrobin
-        server 914-web-01 34.138.32.248:80 check
-        server 914-web-02 3.226.74.205:80 check
+        server 914-web-01 54.242.186.210 check
+        server 914-web-02 35.175.130.113 check
 # end of parameters
